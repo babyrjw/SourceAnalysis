@@ -14,8 +14,11 @@ import java.util.Set;
 
 import static butterknife.internal.ButterKnifeProcessor.VIEW_TYPE;
 
+/**
+ * 针对每一个需要注入的类，都会生成一个ViewInjector
+ */
 final class ViewInjector {
-    //保存所有的@InjectView和事件监听器注解
+    //保存所有的@InjectView和事件监听器注解，一个类中同一个View id可能注解到多个字段上，同一个View id的同一事件可能注解到多个方法上
   private final Map<Integer, ViewInjection> viewIdMap = new LinkedHashMap<Integer, ViewInjection>();
     //保存所有的@InjectViews
   private final Map<CollectionBinding, int[]> collectionBindings =
