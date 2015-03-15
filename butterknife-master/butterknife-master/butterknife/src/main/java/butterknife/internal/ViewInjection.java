@@ -24,7 +24,7 @@ import java.util.Set;
  * id:              R.id.textview
  * viewBinding:     为textview生成的ViewBinding，一个id可能需要注入给多个字段
  * listenerBindings：为textview生成的所有ListenerBinding，1个view可能有多个事件监听器，一个事件监听器
- *                  可能有多个事件响应函数
+ *                  可能有多个事件响应函数，一个响应函数可以调用多个注解的方法
  */
 final class ViewInjection {
   private final int id;
